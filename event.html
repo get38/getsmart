@@ -1,0 +1,483 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>Planning And Developement Commssion-PDC </title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'get/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/bootstrap.min.css' %}">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/style.css' %}">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/custom.css' %}">
+
+	<link href="assets/css/style.css" rel="stylesheet">
+	
+	<link href="{% static 'get/assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+	<link href="{% static 'get/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  
+	<link href="{% static 'get/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+	 <link href="{% static 'get/assets/css/style.css' %}" rel="stylesheet">   
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="{% url 'getnow'   %} ">
+					<img src="{% static 'get/images/logo.png' %}" alt="HOME" /> 
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-rs-food">
+					<ul class="navbar-nav ml-auto">
+						<!--<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>-->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">About</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'organ' %}">organizational sturcture</a>
+								<a class="dropdown-item" href="{% url 'topleaderget' %}">Administration</a>
+								<a class="dropdown-item" href="{% url 'service' %}">services</a>
+								<a class="dropdown-item" href="{% url 'missionvision'%}">misson and vision</a>
+								<a class="dropdown-item" href="{% url 'duites' %} ">duites and responsblity</a>
+							</div>
+						</li>   
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Gallery</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'uploaderget' %}">Photos</a>
+								<a class ="dropdown-item"href="">Videos</a>
+							
+							</div>  
+						</li>   
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Resources</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'resource' %}">Resources </a>
+								<a class="dropdown-item" href="{% url 'plandocs'%}">Planning Documents</a>
+								<a class="dropdown-item" href="{% url 'report' %}">Reports</a>
+								<a class="dropdown-item" href="{% url 'guide'%}">Guidelines & frameworks</a>
+								<a class="dropdown-item" href="{% url 'rule'%}">Rule And Regulations </a>
+								<a class="dropdown-item" href="{% url 'rule'%}">Proclamations, Rules  </a>
+								<a class="dropdown-item" href="">Other Documents </a>
+
+							</div>   	
+						</li>  
+
+
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Data</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'resource' %}">Time Series Data </a>
+						
+
+							</div>
+						</li> 
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Annoucements</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href=" {% url 'vacant' %} ">vacancy </a>
+								<a class="dropdown-item" href="{% url 'bid' %}">Bid</a>
+
+							</div>  
+						</li>  
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Event/News</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="">Event</a>
+								<a class="dropdown-item" href="{% url 'news' %}">News</a> 
+							
+							
+								<li class="nav-item"><a class="nav-link" href="">Contact us</a></li>
+							
+								
+								<img src="{% static 'get/images/ethiopian.png' %}" alt="" width=45 height=32 />
+								
+							</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<!-- Start All Pages -->
+	<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>PDC NEWS</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End All Pages -->
+	
+						
+	<!-- Start blog -->
+	<div class="blog-box">                             
+		<div class="container">
+			<div class="row">            
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+					
+						<h2> የፕላንና ልማት ኮምሽን ዜና</h2>
+						<p> PDC NEWS</p>
+					</div>
+				</div>
+			</div>
+		
+			 <!-- ======= Blog Section ======= -->
+			 <section class="blog" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+				<div class="container">
+		  
+				  <div class="row">
+		  
+					<div class="col-lg-8 entries">
+		  
+					  <article class="entry">
+		  
+						<div class="entry-img">
+						  <img src="{% static 'img/blog-1.jpg' %}" alt="" class="img-fluid">
+						</div>
+		  
+						<h2 class="entry-title">
+						  <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia
+							reiciendis</a>
+						</h2>
+		  
+					
+		  
+						<div class="entry-content">
+						  <p>
+							Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et
+							laboriosam eius aut nostrum quidem aliquid dicta.
+							Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos
+							aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+						  </p>
+						  <div class="read-more">
+							<a href="blog-single.html">Read More</a>
+						  </div>
+						</div>
+		  
+					  </article><!-- End blog entry -->
+		  
+					  <article class="entry">
+		  
+						<div class="entry-img">
+						  <img src="{% static 'img/blog-1.jpg' }%" alt="" class="img-fluid">
+						</div>
+		  
+						<h2 class="entry-title">
+						  <a href="blog-single.html">Nisi magni odit consequatur autem nulla dolorem</a>
+						</h2>
+		  
+					
+					
+		  
+						<div class="entry-content">
+						  <p>
+							Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo
+							libero rerum voluptatem pariatur nam.
+							Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia
+							molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et
+							sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
+						  </p>
+						  <div class="read-more">
+							<a href="blog-single.html">Read More</a>
+						  </div>
+						</div>
+		  
+					  </article><!-- End blog entry -->
+		  
+					  <article class="entry">
+		  
+						<div class="entry-img">
+						  <img src="assets/img/blog-post-3.jpg" alt="" class="img-fluid">
+						</div>
+		  
+						<h2 class="entry-title">
+						  <a href="blog-single.html">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit
+							sint.</a>
+						</h2>
+		  
+					
+		  
+						<div class="entry-content">
+						  <p>
+							Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et.
+							Eum temporibus fugiat voluptate enim tenetur sunt omnis.
+							Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.
+						  </p>
+						  <div class="read-more">
+							<a href="blog-single.html">Read More</a>
+						  </div>
+						</div>
+		  
+					  </article><!-- End blog entry -->
+		  
+					  <article class="entry">
+		  
+						<div class="entry-img">
+						  <img src="assets/img/blog-post-4.jpg" alt="" class="img-fluid">
+						</div>
+		  
+						<h2 class="entry-title">
+						  <a href="blog-single.html">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius
+							exercitationem. Veniam eius velit ab ipsa quidem rem.</a>
+						</h2>
+		  
+					
+		  
+						<div class="entry-content">
+						  <p>
+							Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum
+							enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
+							Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui
+							voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat
+							magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
+						  </p>
+						  <div class="read-more">
+							<a href="blog-single.html">Read More</a>
+						  </div>
+						</div>
+		  
+					  </article><!-- End blog entry -->
+		  
+		  
+					</div><!-- End blog entries list -->
+		  
+					<div class="col-lg-4">
+					  <div class="sidebar">
+		  
+						<h3 class="sidebar-title">Search</h3>
+						<div class="sidebar-item search-form">
+						  <form action="">
+							<input type="text">
+							<button type="submit"><i class="icofont-search"></i></button>
+						  </form>
+						</div><!-- End sidebar search formn-->
+		  
+						<h3 class="sidebar-title">Categories</h3>
+						<div class="sidebar-item categories">
+						  <ul>
+							<li><a href="#">General <span>(25)</span></a></li>
+							<li><a href="#">Lifestyle <span>(12)</span></a></li>
+							<li><a href="#">Travel <span>(5)</span></a></li>
+							<li><a href="#">Design <span>(22)</span></a></li>
+							<li><a href="#">Creative <span>(8)</span></a></li>
+							<li><a href="#">Educaion <span>(14)</span></a></li>
+						  </ul>
+		  
+						</div><!-- End sidebar categories-->
+		  
+						<h3 class="sidebar-title">Recent Posts</h3>
+						<div class="sidebar-item recent-posts">
+						  <div class="post-item clearfix">
+							<img src="assets/img/recent-posts-1.jpg" alt="">
+							<h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+							<time datetime="2020-01-01">Jan 1, 2020</time>
+						  </div>
+		  
+						  <div class="post-item clearfix">
+							<img src="assets/img/recent-posts-2.jpg" alt="">
+							<h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+							<time datetime="2020-01-01">Jan 1, 2020</time>
+						  </div>
+		  
+						  <div class="post-item clearfix">
+							<img src="assets/img/recent-posts-3.jpg" alt="">
+							<h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+							<time datetime="2020-01-01">Jan 1, 2020</time>
+						  </div>
+		  
+						  <div class="post-item clearfix">
+							<img src="assets/img/recent-posts-4.jpg" alt="">
+							<h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+							<time datetime="2020-01-01">Jan 1, 2020</time>
+						  </div>
+		  
+						  <div class="post-item clearfix">
+							<img src="assets/img/recent-posts-5.jpg" alt="">
+							<h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+							<time datetime="2020-01-01">Jan 1, 2020</time>
+						  </div>
+						</div><!-- End sidebar recent posts-->
+		  
+				
+		  
+					  </div><!-- End sidebar -->
+		  
+					</div><!-- End blog sidebar -->
+		  
+				  </div><!-- End .row -->
+		  
+				</div><!-- End .container -->
+		  
+			  </section><!-- End Blog Section -->
+		  
+			</main><!-- End #main -->
+		  
+			<!-- ======= Footer ======= -->
+		
+		  
+			  
+			  </div>
+
+
+  
+	
+	<!-- End blog -->
+	
+	<!-- Start Contact info -->
+	<div class="contact-imfo-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>Phone</h4>
+						<p class="lead">
+							+251938932487 
+						</p>    
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-envelope"></i>
+					<div class="overflow-hidden">
+						<h4>Email</h4>
+						<p class="lead">
+							sndtogetmail@gmail.com 
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-map-marker"></i>
+					<div class="overflow-hidden">
+						<h4>Location</h4>
+						<p class="lead">
+							it's location
+						</p>
+					</div>
+				</div>
+			</div>    
+		</div>
+	</div>
+	<!-- End Contact info -->
+	
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About PDC</h3>
+					<p> planning and developement commssion is established in 2005 .</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>important Links</h3>
+					<p><span class="text-color"><a href=" ">PDC  library </span>   </a>   </p>
+					 <p><span class="text-color"><a href=" ">PDC Mail </span> </a></p>
+					<p><span class="text-color"><a href=" ">PDC IT Support System </span> </a></p>
+				   
+				    <p><span class="text-color"><a href="https://www.un.org/development/desa/disabilities/about-us/sustainable-development-goals-sdgs-and-disability.html ">Sustainable Development Goals</span> </a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Contact information</h3>
+					<p class="lead">   </p>
+					<p class="lead"><a href="#">+251938932487</a></p>
+				    <p><a href="https://www.google.com.et/maps/place/Ethiopian+plan+Commision/@9.04393,38.760708,885m/data=!3m1!1e3!4m8!1m2!2m1!1snational+palnning+commssion!3m4!1s0x164b8f68d7e4f0d7:0xcfcf8b37120ab33f!8m2!3d9.0452624!4d38.7623904?hl=en"> Map and Directions</a></p>
+				
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Subscribe</h3>
+					<div class="subscribe_form">
+						<form class="subscribe_form">
+							<input name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address..." type="email">
+							<button type="submit" class="submit">SUBSCRIBE</button>
+							<div class="clearfix"></div>
+						</form>
+					</div>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="company-name">All Rights Reserved &copy; 2020 <a href="#">PDC by ICT DIRECTORATE </a>
+					    <p class="company-name"> <a href="#">Design By Getahun Zeberga </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+	<!-- ALL JS FILES -->
+	<script src="{% static 'get/js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'get/js/popper.min.js' %}"></script>
+	<script src="{% static 'get/js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{% static 'get/js/jquery.superslides.min.js' %}"></script>
+	<script src="{% static 'get/js/images-loded.min.js' %}"></script>
+	<script src="{% static 'get/js/isotope.min.js' %}"></script>
+	<script src="{% static 'get/js/baguetteBox.min.js' %}"></script>
+	<script src="{% static 'get/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'get/js/contact-form-script.js' %}"></script>
+    <script src="{% static 'get/js/custom.js' %}"></script>
+
+
+
+
+
+
+  <script src="{% static 'get/assets/vendor/jquery/jquery.min.js' %}"></script>
+  
+  <script src="{% static 'get/assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/counterup/counterup.min.js' %}"></script>
+
+  <script src="{% static 'get/assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'get/assets/js/main.js' %}"></script>
+
+
+</body>
+</html>

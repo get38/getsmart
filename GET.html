@@ -1,0 +1,684 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title> HOME PDC</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href=" {% static 'get/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'get/images/apple-touch-icon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/bootstrap.min.css' %}">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/style.css' %}">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/custom.css' %}">
+
+
+
+
+	 
+  <link href="{% static 'get/assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'get/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'get/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+   <link href="{% static 'get/assets/css/style.css' %}" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	 
+</head>
+
+<body>
+
+
+
+	
+	<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=2819091678134468&autoLogAppEvents=1"></script>
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="{{blog.urls}}">
+					<img src="{% static 'get/images/logo.png' %}" alt="HOME" /> 
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>  
+				<div class="collapse navbar-collapse" id="navbars-rs-food">
+					<ul class="navbar-nav ml-auto">
+						<!--<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>-->
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">About</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'organ' %}">10 Year Plan</a>
+								<a class="dropdown-item" href="{% url 'organ' %}">Organizational Sturcture</a>
+								<a class="dropdown-item" href="{% url 'topleaderget' %}">Leadership</a>
+								<a class="dropdown-item" href="{% url 'service' %} ">Services</a>
+								<a class="dropdown-item" href="{% url 'missionvision'%}">Misson and Vision</a>
+								<a class="dropdown-item" href="{% url 'duites' %} ">Duites and Responsblity</a>
+							</div>
+						</li>   
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Gallery</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'uploaderget' %}">Photos</a>
+								<a class ="dropdown-item"href="{% url 'videos'%}">Videos</a>
+							
+							</div>  
+						</li>   
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Resources</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'resource' %}">Resources </a>
+								<a class="dropdown-item" href="{% url 'plandocs'%}">Planning Documents</a>
+								<a class="dropdown-item" href="{% url 'report' %}">Reports</a>
+								<a class="dropdown-item" href="{% url 'guide'%}">Guidelines & frameworks</a>
+								<a class="dropdown-item" href="{% url 'rule'%}">Rule And Regulations </a>
+								<a class="dropdown-item" href="{% url 'rule'%}">Proclamations, Rules  </a>
+								<a class="dropdown-item" href="">Newsletters </a>
+								<a class="dropdown-item" href="">Other Documents </a>
+
+							</div>   	
+						</li>  
+
+
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Data</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'resource' %}">Time Series Data </a>
+						
+
+							</div>
+						</li> 
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Annoucements</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href=" {% url 'vacant' %} ">Vacancy </a>
+								<a class="dropdown-item" href="{% url 'bid' %}">Bid</a>
+
+							</div>  
+						</li>  
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Event/News</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="">Event</a>
+								<a class="dropdown-item" href="{% url 'news' %}">News</a> 
+							
+							
+								<li class="nav-item"><a class="nav-link" href=" {% url 'contact' %} ">Contact Us</a></li>
+							
+								
+								<img src="{% static 'get/images/ethiopian.png' %}" alt="" width=45 height=32 />
+								
+							</div>
+						
+
+
+							
+							<script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(101136)</script> 
+						
+					</ul>
+								
+						
+				</div>
+			</div>
+			<div class="d-inline-block text-center dd_position_relative ">
+				<select class="form-control fh5co_text_select_option">
+					<option>Amharic </option>
+					<option>English </option>
+				</select>
+			</div>
+		</nav>
+	</header>
+	
+	<!-- End header -->
+	
+
+
+	
+	
+	<!-- Start slides -->
+	<div id="slides" class="cover-slides">
+		<ul class="slides-container">      {% for x in data %} 
+			<li class="text-center">      
+				<img src="{% static 'get/images/all-bg.jpg' %}" alt="">
+				
+				<div class="container">       
+					<div class="row">    
+						<!--<div class="col-md-12">-->
+							<div class="banner-cell">
+ 
+							<h1 class="m-b-20"><strong>{{x.title}}</strong></h1>
+							<p class="m-b-40">{{x.description|truncatewords:5}}   .</p> 
+				   
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="{% url 'post' pk=x.pk  %} ">Read More</a></p>
+						</div>
+					</div>
+				</div>
+				{% endfor %} 
+			</li>
+
+		</ul>
+		<div class="slides-navigation">
+			<a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+		
+
+
+
+		</div>
+	</div>
+
+					
+				
+	<!-- End slides -->
+	<div class="container-fluid fh5co_header_bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 fh5co_mediya_center"><a href="#" class="color_fff fh5co_mediya_setting"><i
+						class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp;april 5,2020</a>
+					<div class="d-inline-block fh5co_trading_posotion_relative"><a href="#" class="treding_btn">Our 10 Year Plan</a>
+						<div class="fh5co_treding_position_absolute"></div>
+					</div>
+					<a href="#" class="color_fff fh5co_mediya_setting">our 10 year plan is prepared and launch soon</a>
+					<h1 class="fs-50 fw-600 lh-15 hidden-sm-down"> <span class="text-primary" data-type="የፕላንና ልማት ኮምሽን"></span></h1>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+						<div class="heading-title text-center">
+							<h2>LATEST NEWS</h2>
+		<p>Latest News of Planning and Developement Commssion</p>
+
+	</div>  
+</div>
+</div>
+
+	<div class="row">                             {% for x in get_list %}      
+		<div class="col-lg-4 col-md-6 col-12">     
+			 
+				<div class="blog-img-box">  
+					<div class="d-inline-block fh5co_trading_posotion_relative"><a href="#" class="treding_btn">{{x.title}}</a>
+					</div>    
+					<img class="img-fluid" src="{{ x.image.url }}" alt="">
+				</div>
+				<div class="blog-detail">
+					
+					<ul>
+						<li><span>Post by   {{x.authors}}</span></li>
+						<li>|</li>
+						<li><span>{{x.published_date|timesince }} ago</span></li>
+					</ul>
+					<p>   {{x.description|truncatewords:3}}      </p>  
+									
+				 
+			<a class="btn btn-lg btn-circle btn-outline-new-white" href="{% url 'post' pk=x.pk  %}">Read More</a> 
+		
+				</div>                             
+			
+		</div>
+	 {% endfor %}
+	</div>
+		
+	</div>	      
+</div>
+
+
+
+
+
+{% if object_list.has_other_pages %}
+<ul class="pagination pagination-lg">
+{% if object_list.has_previous %}
+<li><a href="?page={{ object_list.previous_page_number }}">&laquo;</a></li>
+{% else %}
+<li class="disabled"><span>&laquo;</span></li>
+{% endif %}
+{% for i in object_list.paginator.page_range %}
+{% if object_list.number == i %}
+<li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+{% else %}
+<li><a href="?page={{ i }}">{{ i }}</a></li>
+{% endif %}
+{% endfor %}
+{% if object_list.has_next %}
+<li><a href="?page={{ object_list.next_page_number }}">&raquo;</a></li>
+{% else %}
+<li class="disabled"><span>&raquo;</span></li>
+{% endif %}
+</ul>
+{% endif %}
+</ul>
+</nav>
+
+	  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">          {% for x in messcom %}
+          <div class="col-lg-6 video-box">
+            <img src="{{x.image_com.url}}" class="img-fluid" alt="">
+           
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+            <div class="section-title">
+              <h2>Message From Commssioner</h2>
+            
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Message </a></h4>
+              <p class="description">{{x.message}}</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+
+                       <h4 class="title"><a href="">Download  Speech</a></h4>
+			  <a href="{{x.file_pdc_report.url}}"><img src="{% static 'get/images/pdf-icon.png'%}" alt="" 
+			    <a href=""> <img src="{% static 'get/images/logo.png'%}" alt="" /></a>	
+     
+              <p class="description"></p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+	  {% endfor %} 
+    </section><!-- End About Us Section --> 
+	
+	<!-- End About -->
+	
+	<!-- Start QT -->
+	<div class="qt-box qt-background">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 ml-auto mr-auto text-left">
+					<p class="lead ">
+						" our 10 year presepective plan is prepared in planning and developement commssion  "
+					</p>
+					<span class="lead">Get </span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End QT -->
+
+
+
+	<div class="stuff-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>LEADERSHIP</h2>
+						<p>National Planning Commssion Leadership</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">                            {% for x in leaderpdc %} 
+				<div class="col-md-4 col-sm-6">     
+					<div class="our-team">
+						<img src="{{x.uploaded_img.url }}">
+						<div class="team-content">
+							<h3 class="title">{{x.name}}</h3>
+							<span class="post">{{x.postion}}</span>
+							<ul class="social">
+								<li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+				</div>
+                   {% endfor %}
+				
+
+			
+			</div>
+		</div>
+	</div>
+	
+	 <section id="services" class="services">
+      <div class="container">
+
+       <div class="heading-title text-center">
+						<h2>SERVICES </h2>
+						<p> Planning and developement Commssion services</p>
+					</div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="icofont-computer"></i></div>
+            <h4 class="title"><a href="">Monitoring and evaluation </a></h4>
+            <p class="description"> Monitoring and evaluation service in planning and developement commssion  </p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+            <h4 class="title"><a href="">analyzing statsical data </a></h4>
+            <p class="description">analysing statsical data service in planning and developement commssion         </p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="icofont-earth"></i></div>
+            <h4 class="title"><a href="">national Economy account</a></h4>
+            <p class="description">national Economy account service in planning and developement commssion   </p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="icofont-image"></i></div>
+            <h4 class="title"><a href="">project apparisal</a></h4>
+            <p class="description">project apparisal service in planning and developement commssion     </p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="icofont-settings"></i></div>
+            <h4 class="title"><a href="">population data </a></h4>
+            <p class="description"> population data service in planning and developement commssion </p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+            <h4 class="title"><a href=""> macro economy analysing</a></h4>
+            <p class="description"> macro economy analysing service in planning and developement commssion </p>
+		  </div>
+		  
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+	
+	
+	
+	
+	<!-- Start Customer Reviews -->
+	<div class="customer-reviews-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>OUR REPORTING ORGANIZATIONS </h2>
+						<p> OUR REPORTING ORGANIZATION OF PLANNING AND DEVELOPEMENT COMMSSION </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 mr-auto ml-auto text-center">
+					<div id="reviews" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner mt-4">
+							<div class="carousel-item text-center active">
+								<div class="img-box p-1 border rounded-circle m-auto">
+									<img class="d-block w-100 rounded-circle" src="{% static 'get/images/policy.png' %} " alt="">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"> policy study insituite </strong></h5>
+								
+								<p class="m-0 pt-3"> https://psi.gov.et
+							</div>
+							<div class="carousel-item text-center">
+								<div class="img-box p-1 border rounded-circle m-auto">
+									<img class="d-block w-100 rounded-circle" src="{% static 'get/images/csa.jpg' %}" alt="">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Central Statistical Agency </strong></h5>
+								
+								<p class="m-0 pt-3"> http://csa.gov.et</p>
+							</div>
+						
+						</div>
+						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+							<i class="fa fa-angle-left" aria-hidden="true"></i>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<span class="sr-only">Next</span>
+						</a>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Customer Reviews -->
+	
+	<!-- Start Contact info -->
+	<div class="contact-imfo-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>Phone</h4>
+						<p class="lead">
+							+251-11-122-44-90/99
+						</p>
+						<p class="lead">
+							+251-11-122-44-98
+						</p>
+						<p class="lead">
+							+251-11-122-66-44
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-envelope"></i>
+					<div class="overflow-hidden">
+						<h4>Address</h4>
+						<p class="lead">
+							PO BOX  4472
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>Fax</h4>
+						<p class="lead">
+							+251-11-122-67-09
+						</p>
+						<p class="lead">
+							+251-11-122-66-42
+						</p>
+						<p class="lead">
+							+251-11-122-44-97
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contact info -->
+	
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About PDC</h3>
+<img src="{% static 'get/images/logo.png' %}" alt="HOME" /> 
+	<p> and developement commssion is established in 2005 and it's a goverement organizationplanning and developement commssion is established in 2005 and it's a goverement organizationplanning and developement commssion is established in 2005 and it's a goverement organizationplanning and developement commssion is established in 2005 and it's a goverement organization.</p> 
+	
+</div>
+
+
+
+				<div class="col-lg-3 col-md-6">
+					<h3>important Links</h3>
+					<p><span class="text-color"><a href=" https://forms.gle/VjvwcRK2BP9Xgz2j8 ">Rate Our Website </span>   </a>   </p>
+					<p><span class="text-color"><a href="http://lib.pdc.gov.et">PDC  library </span>   </a>   </p>   
+					 <p><span class="text-color"><a href=" https://mail.pdc.gov.et/">PDC Mail </span> </a></p>
+					 <p><span class="text-color"><a href=" ">Sectors  </span> </a></p>
+					<p><span class="text-color"><a href=" ">PDC IT Support System </span> </a></p>
+					<p><span class="text-color"><a href=" ">PDC HR management System </span> </a></p>
+					<p><span class="text-color"><a href=" ">PDC Vehicle Management System </span> </a></p>
+			
+				   
+				    <p><span class="text-color"><a href="https://www.un.org/development/desa/disabilities/about-us/sustainable-development-goals-sdgs-and-disability.html ">Sustainable Development Goals</span> </a></p>
+				</div>
+
+				<div class="col-lg-3 col-md-6">  
+					
+					<h3>Latest info</h3>  {% for x in get_list %}    
+				
+					<p><span class="text-color"><a href=" ">{{x.title}} </span>   </a>   </p> 
+					
+				
+				    
+					{% endfor %}
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<h3>Visitor </h3>
+					 <!--<a href='https://www.symptoma.com/en/info/covid-19'>new Coronavirus</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=870db5f4634cc5ca8bca320581a17333b5dc28f7'></script>
+					<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/659375/t/0"></script>
+
+					<div class="subscribe_form"> 
+					
+				
+					--> 
+					<a href=""><img src="https://s11.flagcounter.com/count2/ZVGo/bg_E4F2E6/txt_238C08/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>		
+			
+                 
+
+
+
+
+				
+				</div>
+
+
+
+				
+				<div class="col-lg-3 col-md-6">  
+					
+					<h3>Latest Events</h3>  {% for x in get_list %}    
+				
+					<p><span class="text-color"><a href=" ">{{x.title}} </span>   </a>   </p> 
+					
+				
+				    
+					{% endfor %}
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<h3>Twitter</h3>
+				
+					<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<a class="twitter-timeline" data-width="340" data-height="360" href="https://twitter.com/PDC_Ethiopia?ref_src=twsrc%5Etfw">Tweets by PDC_Ethiopia</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+			
+				</div>
+
+
+				<div class="col-lg-3 col-md-6">
+					<h3>Facebook</h3>
+					<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<div class="fb-page" data-href="https://www.facebook.com/PDCETH" data-tabs="timeline" data-width="340" data-height="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/PDCETH" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PDCETH">FDRE Planning and Development Commission</a></blockquote></div>
+				    
+				
+			
+				</div>
+				<h3>CATEGORIES</h3> 
+				<div class="blog-categories">  {% for x in catem %}
+			   
+			
+						<ul> 
+							<li><a href="{% url 'cate' x.id %}"><span>   {{x.cateoryname}} {{x.idm}} {{x.object_list}}</span></a></li>
+							 {% endfor %}   
+						</ul>
+						
+					</div> 
+			
+				
+						
+						
+			</div>
+
+		</div>
+
+	</div>
+	
+
+	
+
+
+
+			
+		
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="company-name">All Rights Reserved &copy; 2020 <a href="#">PDC by ICT DIRECTORATE </a>
+					    <p class="company-name"> <a href="#">Developer </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+	<!-- ALL JS FILES -->
+	<script src="{% static 'get/js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'get/js/popper.min.js' %}"></script>
+	<script src="{% static 'get/js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{% static 'get/js/jquery.superslides.min.js' %}"></script>
+	<script src="{% static 'get/js/images-loded.min.js' %}"></script>
+	<script src="{% static 'get/js/isotope.min.js' %}"></script>
+	<script src="{% static 'get/js/baguetteBox.min.js' %}"></script>
+	<script src="{% static 'get/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'get/js/contact-form-script.js' %}"></script>
+    <script src="{% static 'get/js/custom.js' %}"></script>
+
+
+
+
+
+
+  <script src="{% static 'get/assets/vendor/jquery/jquery.min.js' %}"></script>
+  
+  <script src="{% static 'get/assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/counterup/counterup.min.js' %}"></script>
+
+  <script src="{% static 'get/assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'get/assets/js/main.js' %}"></script>
+
+ <script src="{% static 'get/assets/js/main.js' %}"></script>
+  <script src="{% static 'get/assets/js/thesaas.min.js' %}"></script>
+  <script src="{% static 'get/assets/js/core.min.js' %}" ></script>
+</body>
+</html>

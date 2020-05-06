@@ -1,0 +1,382 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>Planning And Developement Commssion-PDC </title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'get/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/bootstrap.min.css' %}">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/style.css' %}">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'get/css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="{% url 'getnow'   %} ">
+					<img src="{% static 'get/images/logo.png' %}" alt="HOME" /> 
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-rs-food">
+					<ul class="navbar-nav ml-auto">
+						<!--<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>-->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">About</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'organ' %}">organizational sturcture</a>
+								<a class="dropdown-item" href="{% url 'topleaderget' %}">Administration</a>
+								<a class="dropdown-item" href="{% url 'service' %}">services</a>
+								<a class="dropdown-item" href="{% url 'missionvision'%}">misson and vision</a>
+								<a class="dropdown-item" href="{% url 'duites' %} ">duites and responsblity</a>
+							</div>
+						</li>   
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Gallery</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'uploaderget' %}">Photos</a>
+								<a class ="dropdown-item"href="">Videos</a>
+							
+							</div>  
+						</li>   
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Resources</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'resource' %}">Resources </a>
+								<a class="dropdown-item" href="{% url 'plandocs'%}">Planning Documents</a>
+								<a class="dropdown-item" href="{% url 'report' %}">Reports</a>
+								<a class="dropdown-item" href="{% url 'guide'%}">Guidelines & frameworks</a>
+								<a class="dropdown-item" href="{% url 'rule'%}">Rule And Regulations </a>
+								<a class="dropdown-item" href="{% url 'rule'%}">Proclamations, Rules  </a>
+								<a class="dropdown-item" href="">Other Documents </a>
+
+							</div>   	
+						</li>  
+
+
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Data</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'resource' %}">Time Series Data </a>
+						
+
+							</div>
+						</li> 
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Annoucements</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href=" {% url 'vacant' %} ">vacancy </a>
+								<a class="dropdown-item" href="{% url 'bid' %}">Bid</a>
+
+							</div>  
+						</li>  
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Event/News</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="">Event</a>
+								<a class="dropdown-item" href="{% url 'news' %}">News</a> 
+							
+							
+								<li class="nav-item"><a class="nav-link" href="">Contact us</a></li>
+							
+								
+								<img src="{% static 'get/images/ethiopian.png' %}" alt="" width=45 height=32 />
+								
+							</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<!-- Start All Pages -->
+	<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1></h1>
+					<h1 class="fs-50 fw-600 lh-15 hidden-sm-down"> <span class="text-primary" data-type="የፕላንና ልማት ኮምሽን"></span></h1>
+					<h1>ዜና </h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End All Pages -->
+	
+						
+	<!-- Start blog -->
+	<div class="blog-box">                             
+		<div class="container">
+			<div class="row">            
+				<div class="col-lg-12">
+					
+				</div>
+			</div>
+		
+			<div class="row">                             {% for x in object_list %}      
+				<div class="col-lg-4 col-md-6 col-12">     
+				     
+						<div class="blog-img-box">  
+							<div class="d-inline-block fh5co_trading_posotion_relative"><a href="#" class="treding_btn">{{x.title}}</a>
+								</div>      
+							<img class="img-fluid" src="{{ x.image.url }}" alt="">
+						</div>
+						<div class="blog-detail">
+							
+							<ul>
+								<li><span>Post by {{x.authors}}</span></li>
+								
+								<li><span>Post Before {{x.published_date|timesince }} ago</span></li>
+								<li><span>Category: {{x.categorys}}</span></li>
+							</ul>   
+							<p>   {{x.description|truncatewords:3}}      </p>  
+						        			
+			             
+					<a class="btn btn-lg btn-circle btn-outline-new-white" href="{% url 'post' pk=x.pk  %}">Read More</a> 
+				
+						</div>
+					
+				</div>
+			 {% endfor %}
+			</div>
+				
+			</div>	      
+	  </div>
+  
+ 
+{% if object_list.has_other_pages %}
+  <ul class="pagination pagination-lg">
+    {% if object_list.has_previous %}
+      <li><a href="?page={{ object_list.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in object_list.paginator.page_range %}
+      {% if object_list.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if object_list.has_next %}
+      <li><a href="?page={{ object_list.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+     </ul>
+	 </nav>
+  
+   
+
+
+
+
+
+  
+	
+	<!-- End blog -->
+	
+	<!-- End Customer Reviews -->
+	
+	<!-- Start Contact info -->
+	<div class="contact-imfo-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>Phone</h4>
+						<p class="lead">
+							+251-11-122-44-90/99
+						</p>
+						<p class="lead">
+							+251-11-122-44-98
+						</p>
+						<p class="lead">
+							+251-11-122-66-44
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-envelope"></i>
+					<div class="overflow-hidden">
+						<h4>Address</h4>
+						<p class="lead">
+							PO BOX  4472
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>Fax</h4>
+						<p class="lead">
+							+251-11-122-67-09
+						</p>
+						<p class="lead">
+							+251-11-122-66-42
+						</p>
+						<p class="lead">
+							+251-11-122-44-97
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contact info -->
+	
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About PDC</h3>
+	<p> planning and developement commssion is established in 2005 and it's a goverement organization planning and developement commssion is established in 2005 and it's a goverement organizationplanning and developement commssion is established in 2005 and it's a goverement organizationplanning and developement commssion is established in 2005 and it's a goverement organizationplanning and developement commssion is established in 2005 and it's a goverement organization.</p> 
+	
+</div>
+
+
+
+				<div class="col-lg-3 col-md-6">
+					<h3>important Links</h3>
+					<p><span class="text-color"><a href=" https://forms.gle/VjvwcRK2BP9Xgz2j8 ">Rate Our Website </span>   </a>   </p>
+					<p><span class="text-color"><a href="http://lib.pdc.gov.et">PDC  library </span>   </a>   </p>   
+					 <p><span class="text-color"><a href=" https://mail.pdc.gov.et/">PDC Mail </span> </a></p>
+					 <p><span class="text-color"><a href=" ">Sectors  </span> </a></p>
+					<p><span class="text-color"><a href=" ">PDC IT Support System </span> </a></p>
+					<p><span class="text-color"><a href=" ">PDC HR management System </span> </a></p>
+					<p><span class="text-color"><a href=" ">PDC Vehicle Management System </span> </a></p>
+			
+				   
+				    <p><span class="text-color"><a href="https://www.un.org/development/desa/disabilities/about-us/sustainable-development-goals-sdgs-and-disability.html ">Sustainable Development Goals</span> </a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">  
+					
+					<h3>Latest info</h3>  {% for x in get_list %}    
+				
+					<p><span class="text-color"><a href=" ">{{x.title}} </span>   </a>   </p> 
+					
+				
+				    
+					{% endfor %}
+				</div>
+			
+				<div class="col-lg-3 col-md-6">
+					<h3>Visitor </h3>
+					
+
+					<div class="subscribe_form">
+					
+					</div>
+					<h3>Follow Us</h3>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FPDCETH&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2819091678134468" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+	
+	
+
+
+
+			
+		
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="company-name">All Rights Reserved &copy; 2020 <a href="#">PDC by ICT DIRECTORATE </a>
+					    <p class="company-name"> <a href="#">Developer </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+	<!-- ALL JS FILES -->
+	<script src="{% static 'get/js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'get/js/popper.min.js' %}"></script>
+	<script src="{% static 'get/js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{% static 'get/js/jquery.superslides.min.js' %}"></script>
+	<script src="{% static 'get/js/images-loded.min.js' %}"></script>
+	<script src="{% static 'get/js/isotope.min.js' %}"></script>
+	<script src="{% static 'get/js/baguetteBox.min.js' %}"></script>
+	<script src="{% static 'get/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'get/js/contact-form-script.js' %}"></script>
+    <script src="{% static 'get/js/custom.js' %}"></script>
+
+
+
+
+
+
+  <script src="{% static 'get/assets/vendor/jquery/jquery.min.js' %}"></script>
+  
+  <script src="{% static 'get/assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'get/assets/vendor/counterup/counterup.min.js' %}"></script>
+
+  <script src="{% static 'get/assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'get/assets/js/main.js' %}"></script>
+
+
+</body>
+</html>
+
+  <script src="{% static 'get/assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'get/assets/js/main.js' %}"></script>
+  <script src="{% static 'get/assets/js/thesaas.min.js' %}"></script>
+  <script src="{% static 'get/assets/js/core.min.js' %}" ></script>
+
+</body>
+</html>
