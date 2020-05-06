@@ -13,16 +13,37 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path ,include
-from django.contrib import admin
-from blog.views import *
-from django.conf import settings
-from django.conf.urls.static import static
+from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from . import views
+
+
 urlpatterns = [
-    path('getadmin/get/',admin.site.urls),
-    path('',include("blog.urls")),
-    
-]  
-if settings.DEBUG: # new
- urlpatterns += static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+  # path('',views.blogsm, name='blogsm'),
+  #path('blogs/',views.blogsmn, name='blogsmn'),
+   path('news/',views.blogsm,name='blogsm'),
+   path('post/<int:pk>',views.post, name='post'),
+   path('cat/<int:idm>',views.cat, name='cate'),      
+  # path('form/',views.form,name='formme'), 
+   path('news/',views.blogsm, name='news'),
+   path('',views.getnow,name='getnow'), 
+   path('gallery/',views.gallery, name='uploaderget'),
+   path('vaca/',views.vacancym,name='vacant'),
+   path('topleader/',views.topleader,name='topleaderget'),  
+   path('resource/',views.reso,name='resource'),
+   path('plandoc/',views.planget,name='plandocs'),
+   path('report/',views.report,name='report'),
+   path('guide/',views.guide,name='guide'),
+   path('rule/',views.rule,name='rule'),
+   path('missionvision/',views.missionv,name='missionvision'),
+   path('duitess/',views.duites,name='duites'),
+   path('organ/',views.organ,name='organ'),
+   path('bid/',views.bid,name='bid'), 
+   path('service/',views.service,name='service'), 
+   path('contact/',views.contact,name='contact'),
+   path('videos/',views.videos,name='videos'),
+   path('event/',views.event,name='event'),
+   
+   
+
+]
